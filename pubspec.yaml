@@ -1,0 +1,48 @@
+name: expense_tracker_dev
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.7.0
+  go_router: ^7.0.2
+  lottie: ^2.3.2
+  uuid: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+
+  assets:
+    - assets/animations/splash_screen.json
+  #   -
+  #   - images/a_dot_ham.jpeg
+
+
+  # example:
+  fonts:
+    - family: BrunoAce
+      fonts:
+        - asset: assets/fonts/BrunoAce-Regular.ttf
+
+    - family: CrimsonText
+      fonts:
+        - asset: assets/fonts/CrimsonText-Regular.ttf
+
+
