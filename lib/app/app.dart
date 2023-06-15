@@ -15,7 +15,18 @@ class ExpenseTracker extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp.router(
           theme: ThemeData(
-             useMaterial3: true,
+            useMaterial3: true,
+            /*colorScheme: ColorScheme(onPrimary:, brightness: null,
+                primary: null,
+                secondary: null,
+                onSecondary: null,
+                error: null,
+                onError: null,
+                background: null,
+                onBackground: null,
+                surface: null,
+                onSurface: null),*/
+            primaryColor: ColorManager.rgbWhiteColor,
             appBarTheme: const AppBarTheme(
               elevation: 0,
               color: Color.fromRGBO(236, 242, 254, 1),
