@@ -2,10 +2,10 @@ import 'package:expense_tracker_dev/router/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../resources/resources.dart';
+final scaffoldKey=GlobalKey<ScaffoldMessengerState>();
 
 class ExpenseTracker extends StatelessWidget {
-  const ExpenseTracker({Key? key}) : super(key: key);
-
+    ExpenseTracker({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -14,6 +14,7 @@ class ExpenseTracker extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp.router(
+          scaffoldMessengerKey: scaffoldKey,
           theme: ThemeData(
             useMaterial3: true,
             /*colorScheme: ColorScheme(onPrimary:, brightness: null,
