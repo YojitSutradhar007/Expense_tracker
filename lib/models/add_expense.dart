@@ -28,14 +28,11 @@ class ExpenseList {
 
   totalExpense(){
     for (int i = 0; i < ExpenseData.expData.length; i++) {
-      sum += ExpenseData.expData[i].amount;
-    }
-    for (int i = 0; i < ExpenseData.expData.length; i++) {
       if(category==ExpenseData.expData[i].category){
         count+=ExpenseData.expData[i].amount;
       }
     }
-    print(count);
+    // debugPrint(count.toString());
     return count;
   }
 }

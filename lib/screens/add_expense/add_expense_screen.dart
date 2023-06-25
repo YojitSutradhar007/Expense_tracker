@@ -93,6 +93,9 @@ class _AddNewExpenseState extends State<AddNewExpense> with SingleTickerProvider
                     top: 5.w,
                   ),
                   child: PrimaryTextField(
+                    onTap: (){
+                      showDate(context);
+                    },
                     readOnly: true,
                     textEditingController: _dateController,
                     hintText: "Date",
@@ -249,7 +252,8 @@ class _AddNewExpenseState extends State<AddNewExpense> with SingleTickerProvider
     DateTime now = DateTime.now();
     DateTime firstDate = DateTime(2000);
     picked = await showDatePicker(context: context, initialDate: now, firstDate: firstDate, lastDate: now);
-    _dateController.text = picked.toString().split(" ")[0];
+    // print(picked);
+    _dateController.text = picked.toString().split(" ")[0] ;
     return picked;
   }
 }

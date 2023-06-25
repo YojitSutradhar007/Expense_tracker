@@ -12,6 +12,7 @@ class PrimaryTextField extends StatelessWidget {
     this.prefixText,
     this.keyboardType,
     this.readOnly,
+    this.onTap,
   });
 
   final TextEditingController textEditingController;
@@ -21,10 +22,12 @@ class PrimaryTextField extends StatelessWidget {
   final String ?prefixText;
   final TextInputType ?keyboardType;
   final bool ?readOnly;
+  final VoidCallback ?onTap;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onTap: onTap,
       maxLength: maxLength,
       controller: textEditingController,
       cursorColor: ColorManager.blackColor,
